@@ -17,7 +17,6 @@ class ArticlesController < ApplicationController
           flash[:notice] = "Article was created successfully."
           redirect_to @article
         else
-          flash.now[:danger] = "Article was fail to be created"
           render :new
         end
     end
@@ -29,7 +28,6 @@ class ArticlesController < ApplicationController
         flash[:notice] = "Article was updated successfully."
         redirect_to @article
       else
-        flash.now[:danger] = "Article was fail to be updated"
         render :edit
       end
     end
