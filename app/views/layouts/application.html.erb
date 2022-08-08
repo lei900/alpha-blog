@@ -11,7 +11,10 @@
 
   <body  class="d-flex flex-column">
     <%= render 'shared/header' %>
-    <%= render 'shared/flash_message' %>
-    <%= yield %>
+    <div id="page-content">
+      <%= render 'shared/flash_message' %>
+      <%= yield %>
+    </div>
+    <%= render 'shared/footer' %>
   </body>
 </html>
