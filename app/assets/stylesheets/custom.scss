@@ -22,3 +22,11 @@ body {
   flex: 1 0 auto;
   background-color: lightgray;
 }
+
+#home-bg {
+  background-image: asset-url('homepage.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 425px;
+}
