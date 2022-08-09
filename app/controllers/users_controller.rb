@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: %i[show edit update]
+  before_action :set_user, only: %i[edit update]
 
   def show
+    @user = User.find(params[:id])
     @articles = @user.articles.page(params[:page])
   end
 
@@ -42,6 +43,6 @@ class UsersController < ApplicationController
   end
 
   def set_user
-    @user = User.find(params[:id])
+    @user = current_user
   end
 end
