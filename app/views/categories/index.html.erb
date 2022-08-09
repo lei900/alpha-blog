@@ -1,0 +1,9 @@
+<h1 class="text-center mt-4">Categories</h1>
+
+<div class="container">
+  <% @categories.each do |category| %>
+    <%= render 'category', category: category %>
+  <% end %>
+</div>
+
+<%= paginate(@categories) %>
