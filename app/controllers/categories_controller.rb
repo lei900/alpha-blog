@@ -20,7 +20,9 @@ class CategoriesController < ApplicationController
     @categories = Category.all.page(params[:page])
   end
 
-  def show; end
+  def show
+    @articles = @category.articles.page(params[:page])
+  end
 
   def update
     if @category.update(category_params)
