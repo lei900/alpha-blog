@@ -21,3 +21,11 @@ end
       description: Faker::Quote.matz
   )
 end
+
+User.create!(
+  username: "mia",
+  email: "mia@gmail.com",
+  password: "11111",
+  password_confirmation: "11111",
+  admin: true
+)
