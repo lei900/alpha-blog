@@ -1,0 +1,18 @@
+<div class="row justify-content-center ">
+  <div class="col-8 mt-4 ">
+    <div class="card text-center shadow mb-3 bg-body rounded">
+      <div class="card-header fst-italic fw-light">
+        <%= user.username %>
+      </div>
+      <div class="card-body">
+        <p class="card-title"><%= gravatar_for user, size: 150 %></p>
+        <p class="card-text"><%= pluralize(user.articles.count, "article") %></p>
+        <p><%= link_to 'View Profile', user_path(user), class: "btn btn-outline-success" %> 
+        <%= link_to 'Edit Profile', edit_user_path(user), class: "btn btn-outline-info" %> 
+      </div>
+      <div class="card-footer text-muted">
+        <small>Joined <%= time_ago_in_words(user.created_at) %> ago</small>
+      </div>
+    </div>
+  </div>
+</div>

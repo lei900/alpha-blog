@@ -1,0 +1,7 @@
+<h1 class="text-center mt-4">Alpha Bloggers</h1>
+
+<div class="container">
+  <% @users.each do |user| %>
+    <%= render 'user', user: user %>
+  <% end %>
+</div>
