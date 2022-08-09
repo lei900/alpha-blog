@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
     end
 
     def new
-        @article = Articles.new
+        @article = Article.new
     end
 
     def create
@@ -43,7 +43,7 @@ class ArticlesController < ApplicationController
     private
 
     def set_article
-      @article = Articles.find(params[:id])
+      @article = Article.find(params[:id])
     end
 
     def article_params
