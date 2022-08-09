@@ -4,7 +4,7 @@
       <div class="card-header fst-italic fw-light">
         by <%= link_to article.user.username, user_path(article.user) %>
         <% if article.categories.any? %>
-        <div class="mt-2"><%= render article.categories %></div> 
+        <div class="mt-2">category: <%=  article.categories.map { |category| category[:name] } %></div> 
         <% end %>
       </div>
       <div class="card-body">
